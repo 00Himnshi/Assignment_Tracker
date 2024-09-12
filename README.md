@@ -16,3 +16,6 @@ This is a menu-driven program that performs the following tasks:
 - **Check Updates:** The `check_updates` function extracts assignments and checks if any new assignments have been posted by comparing them with previously posted assignments stored in a text file.
 - **Extract Assignment Details:** The `extract_assignment_details` function scrapes necessary information such as submission status, grading status, due date, time remaining, and last modified date for an assignment based on the user's choice and displays it to the user.
 - **Submit URL:** The `get_submit_url` function provides a direct link to the submission page of a particular assignment.
+
+## Demo Video link:
+https://drive.google.com/drive/folders/1VSAFCdkwYqYqGXZmB64IBTLzzibHrFAj?usp=sharing
