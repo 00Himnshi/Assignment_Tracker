@@ -68,10 +68,14 @@ def check_updates():
             # Save current assignments to file
             with open(all_assignments, 'w') as file:
                 file.write('\n'.join(current_assignments))
+            #Returning the updates 
+            return text
         else:
             print("\nNo new assignments.")
+            return "NONE"
     else:
         print("Login failed!")
+        return "NONE"
         exit()
 import requests
 from bs4 import BeautifulSoup
