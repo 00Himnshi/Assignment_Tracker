@@ -29,21 +29,16 @@ def check_updates():
         # Parse the HTML content
         soup = BeautifulSoup(response.content, 'html.parser')
 
-        # Find and print information about new assignments
         page_content = soup.find('div', id='page-content')
 
-        # Extract course sections
         sections = page_content.find_all('li', class_='section main clearfix')
 
         current_assignments = []
 
         for section in sections:
-            # Extract section title
             section_title = section.find('h3', class_='sectionname')
             if section_title:
                 print(f"Section Title: {section_title.get_text(strip=True)}")
-
-            # Extract activities within this section
             activities = section.find_all('li', class_='activity')
             for activity in activities:
                 activity_link = activity.find('a')
@@ -84,7 +79,6 @@ from bs4 import BeautifulSoup
 
 def extract_assignment_details(url):
     global response
-    # Check if the request was successful
     if response.ok :
         # Parse the HTML content of the page
         response = session.get(url)
@@ -103,14 +97,10 @@ def extract_assignment_details(url):
         rows = rawdata.find_all('tr')
             
         for row in rows:
-                # Find the two columns in the row
             cols = row.find_all('td')
             if len(cols) == 2:
-                    # Extract text from the second column
                 key = cols[0].get_text(strip=True)
                 value = cols[1].get_text(strip=True)
-                    
-                    # Map the key to the dictionary
                 if key == 'Submission status':
                     details['submissionStatus'] = value
                 elif key == 'Grading status':
