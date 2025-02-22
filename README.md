@@ -1,5 +1,7 @@
 # Assignment Tracker
 
+## Demo Video link:
+https://drive.google.com/drive/folders/1VSAFCdkwYqYqGXZmB64IBTLzzibHrFAj?usp=sharing
 ## Technologies Used
 - Python
 - BeautifulSoup
@@ -23,5 +25,3 @@ This is a menu-driven program that performs the following tasks:
 send.py contains python code for sending WhatsApp update using Twilio's API when there’s an update on the ERP portal.
 send_updates useds the checkupdates function imported from main.py and triggers send.py to notify about any new assignments.
 
-## Demo Video link:
-https://drive.google.com/drive/folders/1VSAFCdkwYqYqGXZmB64IBTLzzibHrFAj?usp=sharing
